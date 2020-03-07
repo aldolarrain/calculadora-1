@@ -40,5 +40,53 @@ namespace webapiCalculadora.Controllers
         }
 
 
+        ///
+        [Route("Adddec")]
+        [HttpPost]
+        public double Adddec([FromHeader]double a, [FromHeader] double b, double c)
+        {
+            return a + b;
+        }
+
+        [Route("Adddec")]
+        [HttpGet]
+        public double Adddec(double a, double b)
+        {
+            return a + b;
+        }
+
+        [Route("Add3")]
+        [HttpPost]
+        public int Add3([FromHeader]int a, [FromHeader] int b, int c,int d)
+        {
+            return a + b+c;
+        }
+
+        [Route("Add3")]
+        [HttpGet]
+        public int Add3(int a, int b,int c)
+        {
+            return a + b+c;
+        }
+
+        [Route("Mult3")]
+        [HttpPost]
+        public int Mult3([FromHeader]int a, [FromHeader] int b, int c, int d)
+        {
+            return a * b * c;
+        }
+
+        [Route("Mult3")]
+        [HttpGet]
+        public int Mult3(int a, int b, int c)
+        {
+            return a * b * c;
+        }
+
+
+
+        
+
+
     }
 }
